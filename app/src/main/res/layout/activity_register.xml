@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    android:background="#FFFFFF">
+
+    <!-- "Create an account" di pojok kanan atas -->
+    <TextView
+        android:id="@+id/gotologin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:fontFamily="@font/opensans_bold"
+        android:textColor="#A07E28"
+        android:textSize="16sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <!-- Judul REGISTER -->
+    <TextView
+        android:id="@+id/tvRegisterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTER ACCOUNT"
+        android:textSize="30sp"
+        android:fontFamily="@font/bold"
+        android:textColor="#000000"
+        android:layout_below="@id/gotologin"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/Registerdeskription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fill in the label according to your identity"
+        android:textSize="12sp"
+        android:fontFamily="@font/opensans_reguler"
+        android:textColor="#8A8A8E"
+        android:layout_below="@id/tvRegisterTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp" />
+
+    <!-- Label Username -->
+    <TextView
+        android:id="@+id/labelusername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="14sp"
+        android:fontFamily="@font/bold"
+        android:textColor="#000000"
+        android:layout_below="@id/Registerdeskription"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Input Username -->
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="lutfhi"
+        android:inputType="textEmailAddress"
+        android:textSize="12sp"
+        android:fontFamily="@font/opensans_reguler"
+        android:textColor="#8A8A8E"
+        android:layout_below="@id/labelusername"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Label email -->
+    <TextView
+        android:id="@+id/labelemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="14sp"
+        android:fontFamily="@font/bold"
+        android:textColor="#000000"
+        android:layout_below="@id/etUsername"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Input Email -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="example@gmail.com"
+        android:inputType="textEmailAddress"
+        android:textSize="12sp"
+        android:fontFamily="@font/opensans_reguler"
+        android:textColor="#8A8A8E"
+        android:layout_below="@id/labelemail"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Label Password -->
+    <TextView
+        android:id="@+id/labelpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="14sp"
+        android:fontFamily="@font/bold"
+        android:textColor="#000000"
+        android:layout_below="@id/etEmail"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Input Password -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="**********"
+        android:textSize="12sp"
+        android:fontFamily="@font/opensans_reguler"
+        android:textColor="#8A8A8E"
+        android:inputType="textPassword"
+        android:layout_below="@id/labelpassword"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Terms & Conditions -->
+    <CheckBox
+        android:id="@+id/atasbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By signing in you accept our Terms &amp; Condition and privacy policy."
+        android:textSize="12sp"
+        android:fontFamily="@font/opensans_reguler"
+        android:textColor="#8A8A8E"
+        android:layout_above="@id/btnregister"
+        android:gravity="center"
+        android:buttonTint="#65558F"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Button Login di bawah layar -->
+    <Button
+        android:id="@+id/btnregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="16sp"
+        android:fontFamily="@font/opensans_bold"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/black"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+</RelativeLayout>

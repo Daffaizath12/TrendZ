@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#FFFFFF">
+
+    <!-- Judul Profile -->
+    <TextView
+        android:id="@+id/tvProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMPLETE YOUR\nPROFILE"
+        android:textSize="30sp"
+        android:fontFamily="@font/bold"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
+
+    <FrameLayout
+        android:id="@+id/frameProfileImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/tvProfile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp">
+
+        <!-- Lingkaran Foto Profil -->
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/profile"
+            android:scaleType="centerInside"
+            android:background="@drawable/circle_background"
+            android:contentDescription="Profile Picture"
+            android:padding="24dp" />
+
+        <!-- Tombol Edit di pojok kanan bawah -->
+        <ImageButton
+            android:id="@+id/btnEditPhoto"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="4dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/edit"
+            android:contentDescription="Edit Profile" />
+    </FrameLayout>
+
+
+    <!-- Label Username -->
+    <TextView
+        android:id="@+id/labelusername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="14sp"
+        android:fontFamily="@font/bold"
+        android:textColor="#000000"
+        android:layout_below="@id/frameProfileImage"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Input Username -->
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lutfhi"
+        android:textSize="12sp"
+        android:fontFamily="@font/opensans_reguler"
+        android:textColor="#141112"
+        android:layout_below="@id/labelusername"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Label email -->
+    <TextView
+        android:id="@+id/labelemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="14sp"
+        android:fontFamily="@font/bold"
+        android:textColor="#000000"
+        android:layout_below="@id/etUsername"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Input Email -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Example@gmail.com"
+        android:textSize="12sp"
+        android:fontFamily="@font/opensans_reguler"
+        android:textColor="#141112"
+        android:layout_below="@id/labelemail"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Label Phone -->
+    <TextView
+        android:id="@+id/labelphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone number"
+        android:textSize="14sp"
+        android:fontFamily="@font/bold"
+        android:textColor="#000000"
+        android:layout_below="@id/etEmail"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Input Phone -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+62876554442"
+        android:textSize="12sp"
+        android:fontFamily="@font/opensans_reguler"
+        android:textColor="#141112"
+        android:layout_below="@id/labelphone"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Label Gender -->
+    <TextView
+        android:id="@+id/labelgender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="gender"
+        android:textSize="14sp"
+        android:fontFamily="@font/bold"
+        android:textColor="#000000"
+        android:layout_below="@id/etPassword"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Dropdown Gender -->
+    <AutoCompleteTextView
+        android:id="@+id/etgender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Gender"
+        android:inputType="none"
+        android:textSize="12sp"
+        android:fontFamily="@font/opensans_reguler"
+        android:textColor="#141112"
+        android:layout_below="@id/labelgender"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:dropDownHeight="wrap_content"
+        android:dropDownVerticalOffset="8dp"
+        android:drawableEnd="@drawable/ic_arrow_down"/>
+
+    <!-- Button Login di bawah layar -->
+    <Button
+        android:id="@+id/btncomplateprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complete Profile"
+        android:textSize="16sp"
+        android:fontFamily="@font/opensans_bold"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/black"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+</RelativeLayout>
