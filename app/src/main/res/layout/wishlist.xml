@@ -1,0 +1,364 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- HEADER TOP BAR -->
+    <LinearLayout
+        android:id="@+id/headerTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="#FAFAFA">
+
+        <!-- Text 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:text="Cart"
+            android:textSize="13sp"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="#000"/>
+
+        <!-- Text 2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wishlist (4)"
+            android:textSize="13sp"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="#A07E28"/>
+
+        <!-- Spacer untuk dorong icon ke kanan -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Image 1 -->
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/edit"
+            android:contentDescription="edit"
+            app:tint="#000000" />
+
+        <!-- Image 2 -->
+        <ImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/cancel"
+            android:contentDescription="cancel"
+            app:tint="#000000" />
+    </LinearLayout>
+    <View
+        android:id="@+id/garis"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/headerTop"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="#C6C6C8" />
+
+    <!-- MAIN CONTENT - PRODUCTS -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/garis">
+
+        <GridLayout
+            android:id="@+id/productGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:layout_columnWeight="1"
+                android:elevation="2dp">
+
+                <!-- Gambar Produk -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+
+                    <ImageView
+                        android:id="@+id/productImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/logo" />
+                    <ImageView
+                        android:id="@+id/iconTopRight"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|top"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_favorite"
+                        app:tint="#FF0000" />
+
+                </FrameLayout>
+                <!-- Nama & Harga -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Heeled sandals with detail"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/opensans_reguler"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 100.000"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textColor="#000000"/>
+
+                    <!-- Tombol Add to Cart -->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAddToCart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button_rounded"
+                        android:backgroundTint="@null"
+                        android:text="Add to Cart"
+                        android:textColor="#FFFFFF"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/opensans_bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:layout_columnWeight="1"
+                android:elevation="2dp">
+
+                <!-- Gambar Produk -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+
+                    <ImageView
+                        android:id="@+id/productImage2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/logo" />
+                    <ImageView
+                        android:id="@+id/iconTopRight2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|top"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_favorite"
+                        app:tint="#FF0000" />
+
+                </FrameLayout>
+                <!-- Nama & Harga -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Heeled sandals with detail"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/opensans_reguler"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 100.000"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textColor="#000000"/>
+
+                    <!-- Tombol Add to Cart -->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAddToCart2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button_rounded"
+                        android:backgroundTint="@null"
+                        android:text="Add to Cart"
+                        android:textColor="#FFFFFF"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/opensans_bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:layout_columnWeight="1"
+                android:elevation="2dp">
+
+                <!-- Gambar Produk -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+
+                    <ImageView
+                        android:id="@+id/productImage3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/logo" />
+                    <ImageView
+                        android:id="@+id/iconTopRight3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|top"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_favorite"
+                        app:tint="#FF0000" />
+
+                </FrameLayout>
+                <!-- Nama & Harga -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Heeled sandals with detail"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/opensans_reguler"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 100.000"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textColor="#000000"/>
+
+                    <!-- Tombol Add to Cart -->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAddToCart3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button_rounded"
+                        android:backgroundTint="@null"
+                        android:text="Add to Cart"
+                        android:textColor="#FFFFFF"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/opensans_bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:layout_columnWeight="1"
+                android:elevation="2dp">
+
+                <!-- Gambar Produk -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+
+                    <ImageView
+                        android:id="@+id/productImage4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/logo" />
+                    <ImageView
+                        android:id="@+id/iconTopRight4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|top"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_favorite"
+                        app:tint="#FF0000" />
+
+                </FrameLayout>
+                <!-- Nama & Harga -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Heeled sandals with detail"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/opensans_reguler"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 100.000"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textColor="#000000"/>
+
+                    <!-- Tombol Add to Cart -->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAddToCart4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button_rounded"
+                        android:backgroundTint="@null"
+                        android:text="Add to Cart"
+                        android:textColor="#FFFFFF"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/opensans_bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </GridLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
