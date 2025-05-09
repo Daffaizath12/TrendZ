@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- HEADER TOP BAR -->
+    <LinearLayout
+        android:id="@+id/headerTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="#FAFAFA">
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_search"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:hint="what are you looking for ?"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/opensans_reguler"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="8dp"/>
+
+        <ImageView
+            android:id="@+id/ivNotification"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/cancel"
+            android:contentDescription="cancel"
+            app:tint="#000000"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerTop"
+        android:layout_margin="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Suggested for you"
+            android:textSize="17sp"
+            android:fontFamily="@font/bold"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textSize="16sp"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="#FF2F2F"
+            android:gravity="end" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recent2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recent"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="T-Shirt Hype"
+            android:textSize="14sp"
+            android:fontFamily="@font/opensans_reguler"
+            android:textColor="#8A8A8E" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/close"
+            android:contentDescription="cancel"
+            app:tint="#8A8A8E"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recent3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recent2"
+        android:layout_margin="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Shirt"
+            android:textSize="14sp"
+            android:fontFamily="@font/opensans_reguler"
+            android:textColor="#8A8A8E" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/close"
+            android:contentDescription="cancel"
+            app:tint="#8A8A8E"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
